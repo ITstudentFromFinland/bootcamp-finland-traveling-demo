@@ -1,0 +1,118 @@
+@import "../../../styles/base.scss";
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  border-bottom: 2px solid $lighterGray;
+  background-color: rgb(207, 176, 0);;
+  position: fixed;
+  width: 100%;
+  min-width: 1100px;
+  z-index: 1000;
+}
+
+/* Left side of nav */
+.left-top {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+
+  .hamburger-top-menu {
+    font-size: 20px;
+    color: blue;
+    transition: all 0.25s ease 0s;
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .brand-header {
+    margin-left: 2rem;
+    font-weight: 500;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 1.160rem;
+    letter-spacing: 0.5rem;
+    user-select: none;
+    color: black;
+  }
+}
+
+/* Right side of nav */
+.right-top {
+  display: flex;
+  align-items: center;
+  margin-right: 225px;
+  transition: all 0.25s ease 0s;
+
+  .email {
+    font-size: 13px;
+    margin-right: 1rem;
+    color: black;
+    text-align: right;
+    line-height: 0.5rem;
+  }
+
+  .sign-out {
+    background-color: $lighterGray;
+    color: black;
+    text-decoration: none;
+    font-family: $code;
+    transition: all 0.25s ease 0s;
+    padding: 0.25rem;
+    display: inline-block;
+
+    &:hover {
+      color: $primaryBlue;
+      transform: translateY(-2.5px);
+      transition: all 0.25s ease 0s;
+      cursor: pointer;
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $gray;
+    background-color: $white;
+    padding: 1rem;
+    transform: translate(-9rem, 1.5rem);
+
+    p {
+      width: 140px;
+      color: $darkGray;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 12px;
+    }
+
+    li {
+      width: 140px;
+      padding: 1rem;
+      color: $black;
+      background-color: $white;
+      transition: all 0.25s ease 0s;
+      font-size: 14px;
+
+      &:hover {
+        cursor: pointer;
+        color: $primaryBlue;
+        background-color: $lighterGray;
+        transition: all 0.25s ease 0s;
+      }
+    }
+  }
+}
+
+.hamburger-visible {
+  display: block !important;
+}
+
+.right-top-visibile {
+  margin-right: 0px;
+  transition: all 0.25s ease 0s;
+}
